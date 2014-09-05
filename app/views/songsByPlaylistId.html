@@ -1,0 +1,27 @@
+<form>
+    <h2>Ajouter un son</h2>
+    <div class="col-lg-6">
+    <div class="input-group">
+    <input class="form-control" ng-model="song.name" type="text"/>
+    <span class="input-group-btn"><button class="btn btn-success" ng-click="addSong()">Valider</button></span>
+   </div>
+</div>
+
+</form>
+
+<h2>Liste des sons: {{songs.length}}</h2>
+    <ul class="nav nav-list">
+        <li ng-repeat="s in songs" ng-class-even="'even'" ng-class-odd="'odd'">
+         <a href="">{{$index+":"+s.name}}</a>
+        </li>
+    </ul>
+
+
+    <ul class="nav nav-list">
+    	<h2 class="nav-header clearfix">
+    	Liste des sons: {{songs.length}}</h2>
+        <li ng-repeat="p in songs" ng-class-even="'even'" ng-class-odd="'odd'">
+            <a href="#/playlist/{{$index}}">
+            {{$index+":"+s.name}}</a>
+        </li>
+    </ul>

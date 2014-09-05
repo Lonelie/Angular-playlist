@@ -1,0 +1,8 @@
+	
+    <ul class="nav nav-list">
+    	<h2 class="nav-header clearfix">Liste des playlists: {{playlists.length}}</h2>
+        <li ng-repeat="p in playlists" ng-class-even="'even'" ng-class-odd="'odd'">
+            <a href="#/playlist/{{$index}}"> {{$index+":"+p.title}}</a>
+        </li>
+    </ul>
+

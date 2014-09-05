@@ -1,0 +1,6 @@
+<h2>Liste des playlists: {{playlists.length}}</h2>
+   <ul>
+        <li ng-repeat="p in playlists" ng-class-even="'even'" ng-class-odd="'odd'">
+            <a href="#/edit/{{p.name}}"> {{$index+":"+p.name}}</a>
+        </li>
+    </ul>
